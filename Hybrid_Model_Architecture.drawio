@@ -1,0 +1,301 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.4.0">
+  <diagram id="CompletePipeline" name="Full Methodology Pipeline">
+    <mxGraphModel dx="1952" dy="1260" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Header" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontStyle=1;fontColor=#2D3E50;" value="Comprehensive Research Pipeline: EfficientNet Tuning + Hybrid Classification" vertex="1">
+          <mxGeometry height="50" width="1494" x="80" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Phase1" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;glass=1;shadow=1;" value="Phase 1: Dataset Preparation &amp; Class Standardization" vertex="1">
+          <mxGeometry height="340" width="707" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="GroupLeft" connectable="0" parent="Phase1" style="group" value="" vertex="1">
+          <mxGeometry height="200" width="200" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DS1_Header" parent="GroupLeft" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#104e8b;strokeColor=#000000;fontColor=#ffffff;fontStyle=1;" value="IQ-OTH/NCCD Dataset" vertex="1">
+          <mxGeometry height="40" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="C1_Norm" parent="GroupLeft" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#104e8b;" value="Normal" vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C1_Mal" parent="GroupLeft" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#104e8b;" value="Malignant" vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="C1_Ben" parent="GroupLeft" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#104e8b;" value="Benign" vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GroupRight" connectable="0" parent="Phase1" style="group" value="" vertex="1">
+          <mxGeometry height="200" width="200" x="487" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DS2_Header" parent="GroupRight" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#104e8b;strokeColor=#000000;fontColor=#ffffff;fontStyle=1;" value="Lung Cancer 4 Type" vertex="1">
+          <mxGeometry height="40" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="C2_Norm" parent="GroupRight" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#104e8b;" value="Normal" vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="C2_Adeno" parent="GroupRight" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#104e8b;" value="Adenocarcinoma" vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="C2_Squam" parent="GroupRight" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#104e8b;fontSize=10;" value="Squamous Cell Carc." vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="C2_Large" parent="GroupRight" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#104e8b;" value="Large Cell Carc." vertex="1">
+          <mxGeometry height="30" width="160" x="20" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="GroupCenter" connectable="0" parent="Phase1" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="140" x="283.5" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="M_Norm" parent="GroupCenter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="✅ Normal" vertex="1">
+          <mxGeometry height="40" width="140" as="geometry" />
+        </mxCell>
+        <mxCell id="M_Mal" parent="GroupCenter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" value="⚠️ Malignant" vertex="1">
+          <mxGeometry height="40" width="140" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M_Ben" parent="GroupCenter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" value="❌ Benign" vertex="1">
+          <mxGeometry height="40" width="140" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NewDataset" parent="Phase1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#104e8b;fontColor=#ffffff;strokeColor=#000000;fontStyle=1;" value="🗂️ New Unified Dataset&#xa;(3 Classes)" vertex="1">
+          <mxGeometry height="50" width="200" x="253.5" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="L_N1" edge="1" parent="Phase1" source="C1_Norm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="M_Norm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_N2" edge="1" parent="Phase1" source="C2_Norm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="M_Norm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_M1" edge="1" parent="Phase1" source="C1_Mal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="M_Mal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_M2a" edge="1" parent="Phase1" source="C2_Adeno" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="M_Mal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_M2b" edge="1" parent="Phase1" source="C2_Squam" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="M_Mal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_M2c" edge="1" parent="Phase1" source="C2_Large" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="M_Mal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_B1" edge="1" parent="Phase1" source="C1_Ben" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="M_Ben">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_Final1" edge="1" parent="Phase1" source="M_Norm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="NewDataset">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_Final2" edge="1" parent="Phase1" source="M_Mal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="NewDataset">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_Final3" edge="1" parent="Phase1" source="M_Ben" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="NewDataset">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Arr1" edge="1" parent="1" source="NewDataset" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#f5f5f5;strokeColor=#666666;" target="Phase2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="433.5" y="460" as="sourcePoint" />
+            <mxPoint x="433.5" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Phase2" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;glass=1;shadow=1;" value="Phase 2: Advanced Preprocessing &amp; Augmentation Pipeline" vertex="1">
+          <mxGeometry height="190" width="707" x="80" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="AugRow1" connectable="0" parent="Phase2" style="group" value="" vertex="1">
+          <mxGeometry height="60" width="667" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AugStep1" parent="AugRow1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="1. Raw Input&#xa;(Merged)" vertex="1">
+          <mxGeometry height="60" width="180" as="geometry" />
+        </mxCell>
+        <mxCell id="AugStep2" parent="AugRow1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="2. No-Resize Strategy&#xa;(Original Res)" vertex="1">
+          <mxGeometry height="60" width="180" x="233" as="geometry" />
+        </mxCell>
+        <mxCell id="AugStep3" parent="AugRow1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="3. Contrast Enh.&#xa;(CLAHE &amp; Gamma)" vertex="1">
+          <mxGeometry height="60" width="180" x="467" as="geometry" />
+        </mxCell>
+        <mxCell id="L_Aug12" edge="1" parent="AugRow1" source="AugStep1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AugStep2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_Aug23" edge="1" parent="AugRow1" source="AugStep2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="AugStep3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AugRow2" connectable="0" parent="Phase2" style="group" value="" vertex="1">
+          <mxGeometry height="60" width="667" x="20" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="AugStep6" parent="AugRow2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="6. Final Output&#xa;(3600 Images)" vertex="1">
+          <mxGeometry height="60" width="180" as="geometry" />
+        </mxCell>
+        <mxCell id="AugStep5" parent="AugRow2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="5. Balancing Loop&#xa;(Target: 1200)" vertex="1">
+          <mxGeometry height="60" width="180" x="233" as="geometry" />
+        </mxCell>
+        <mxCell id="AugStep4" parent="AugRow2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="4. Augmentations&#xa;(Rot/Zoom/Shear)" vertex="1">
+          <mxGeometry height="60" width="180" x="467" as="geometry" />
+        </mxCell>
+        <mxCell id="L_Aug45" edge="1" parent="AugRow2" source="AugStep4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="AugStep5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_Aug56" edge="1" parent="AugRow2" source="AugStep5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" target="AugStep6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_Aug34" edge="1" parent="Phase2" source="AugStep3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="AugStep4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Arr2" edge="1" parent="1" source="Phase2" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#f5f5f5;strokeColor=#666666;" target="InputImageNode" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="433.5" y="730" as="sourcePoint" />
+            <mxPoint x="433.5" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="InputImageNode" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;size=20;glass=1;shadow=1;fontStyle=1;fontSize=14;" value="🖼️ Input Image (Augmented)" vertex="1">
+          <mxGeometry height="80" width="120" x="373.5" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="Arr2b" edge="1" parent="1" source="InputImageNode" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#f5f5f5;strokeColor=#666666;" target="Phase3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="433.5" y="830" as="sourcePoint" />
+            <mxPoint x="433.5" y="860" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Phase3" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=1;shadow=1;" value="Phase 3: EfficientNetB3 Pipeline (10 Steps)" vertex="1">
+          <mxGeometry height="340" width="707" x="80" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="Row1Group" connectable="0" parent="Phase3" style="group" value="" vertex="1">
+          <mxGeometry height="80" width="667" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Step1" parent="Row1Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;" value="1. Config &amp; Imports" vertex="1">
+          <mxGeometry height="60" width="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Step2" parent="Row1Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;" value="2. Split Data" vertex="1">
+          <mxGeometry height="60" width="120" x="133" as="geometry" />
+        </mxCell>
+        <mxCell id="Step3" parent="Row1Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;" value="3. Define Model" vertex="1">
+          <mxGeometry height="60" width="120" x="266" as="geometry" />
+        </mxCell>
+        <mxCell id="Step4" parent="Row1Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;" value="4. Verify Data" vertex="1">
+          <mxGeometry height="60" width="120" x="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Step5" parent="Row1Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;" value="5. Optuna Obj (Ph1)" vertex="1">
+          <mxGeometry height="60" width="120" x="533" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S1_S2" edge="1" parent="Row1Group" source="Step1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Step2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S2_S3" edge="1" parent="Row1Group" source="Step2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Step3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S3_S4" edge="1" parent="Row1Group" source="Step3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Step4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S4_S5" edge="1" parent="Row1Group" source="Step4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Step5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Row2Group" connectable="0" parent="Phase3" style="group" value="" vertex="1">
+          <mxGeometry height="80" width="667" x="20" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Step6" parent="Row2Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" value="6. Run Optuna (Hyperparams)" vertex="1">
+          <mxGeometry height="60" width="120" x="533" as="geometry" />
+        </mxCell>
+        <mxCell id="Step7" parent="Row2Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9673a6;" value="7. Optuna Obj (Ph2)" vertex="1">
+          <mxGeometry height="60" width="120" x="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Step8" parent="Row2Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" value="8. Run Optuna (Freeze)" vertex="1">
+          <mxGeometry height="60" width="120" x="266" as="geometry" />
+        </mxCell>
+        <mxCell id="Step9" parent="Row2Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="9. Final Training" vertex="1">
+          <mxGeometry height="60" width="120" x="133" as="geometry" />
+        </mxCell>
+        <mxCell id="Step10" parent="Row2Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="10. Tuned Feature Extractor" vertex="1">
+          <mxGeometry height="60" width="120" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S6_S7" edge="1" parent="Row2Group" source="Step6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Step7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S7_S8" edge="1" parent="Row2Group" source="Step7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Step8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S8_S9" edge="1" parent="Row2Group" source="Step8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Step9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S9_S10" edge="1" parent="Row2Group" source="Step9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Step10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_S5_S6" edge="1" parent="Phase3" source="Step5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="Step6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Arr3" edge="1" parent="1" source="Phase3" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#f5f5f5;strokeColor=#666666;" target="Phase4" value="Features">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="433.5" y="1250" />
+              <mxPoint x="827" y="1250" />
+              <mxPoint x="1220.5" y="1250" />
+              <mxPoint x="1220.5" y="100" />
+            </Array>
+            <mxPoint x="433.5" y="1210" as="sourcePoint" />
+            <mxPoint x="867" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Phase4" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=1;glass=1;shadow=1;" value="Phase 4: Hybrid Classification Pipeline Architecture" vertex="1">
+          <mxGeometry height="250" width="707" x="867" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ph4_Group" connectable="0" parent="Phase4" style="group" value="" vertex="1">
+          <mxGeometry height="180" width="667" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Comp_FE" parent="Ph4_Group" style="swimlane;fillStyle=solid;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Feature Extractor&#xa;(EfficientNetB3)" vertex="1">
+          <mxGeometry height="150" width="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Sub_FE" parent="Comp_FE" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Conv Layers (Frozen)&#xa;&#xa;🧠 CNN&#xa;&#xa;Output: 1536 Features" vertex="1">
+          <mxGeometry height="110" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Comp_PCA" parent="Ph4_Group" style="swimlane;fillStyle=solid;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" value="Dimensionality Reduction" vertex="1">
+          <mxGeometry height="150" width="180" x="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Sub_PCA" parent="Comp_PCA" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" value="📉 PCA&#xa;&#xa;1536 -&gt; 512 Dims" vertex="1">
+          <mxGeometry height="80" width="120" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Comp_SVM" parent="Ph4_Group" style="swimlane;fillStyle=solid;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="Final Classifier" vertex="1">
+          <mxGeometry height="150" width="180" x="460" as="geometry" />
+        </mxCell>
+        <mxCell id="Sub_SVM" parent="Comp_SVM" style="rhombus;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;fontStyle=1;" value="⚙️ SVM&#xa;&#xa;Kernel: RBF" vertex="1">
+          <mxGeometry height="80" width="100" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="L_FE_PCA" edge="1" parent="Ph4_Group" source="Comp_FE" style="edgeStyle=orthogonalEdgeStyle;html=1;align=center;verticalAlign=bottom;endArrow=block;rounded=0;labelBackgroundColor=none;" target="Comp_PCA" value="Extract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="L_PCA_SVM" edge="1" parent="Ph4_Group" source="Comp_PCA" style="edgeStyle=orthogonalEdgeStyle;html=1;align=center;verticalAlign=bottom;endArrow=block;rounded=0;labelBackgroundColor=none;" target="Comp_SVM" value="Reduce">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Arr5" edge="1" parent="1" source="Phase4" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#f5f5f5;strokeColor=#666666;" target="Phase5" value="Predict">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1220.5" y="380" as="sourcePoint" />
+            <mxPoint x="1220.5" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Phase5" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;glass=1;shadow=1;" value="Phase 5: Performance Evaluation &amp; Results" vertex="1">
+          <mxGeometry height="300" width="707" x="867" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="Ph5_Group" connectable="0" parent="Phase5" style="group" value="" vertex="1">
+          <mxGeometry height="230" width="667" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="PredResult" parent="Ph5_Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=18;fontColor=#000000;align=center;" value="Prediction Result&#xa;&#xa;✅ Normal&#xa;❌ Benign&#xa;⚠️ Malignant" vertex="1">
+          <mxGeometry height="150" width="250" x="10" as="geometry" />
+        </mxCell>
+        <mxCell id="MetricGroup" connectable="0" parent="Ph5_Group" style="group" value="" vertex="1">
+          <mxGeometry height="150" width="300" x="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Met1" parent="MetricGroup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontStyle=1;fontSize=14;" value="Accuracy&#xa;99.12%" vertex="1">
+          <mxGeometry height="60" width="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Met2" parent="MetricGroup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontStyle=1;fontSize=14;" value="Precision&#xa;98.6%" vertex="1">
+          <mxGeometry height="60" width="130" x="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Met3" parent="MetricGroup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontStyle=1;fontSize=14;" value="Recall&#xa;99.1%" vertex="1">
+          <mxGeometry height="60" width="130" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Met4" parent="MetricGroup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontStyle=1;fontSize=14;" value="F1 Score&#xa;98.8%" vertex="1">
+          <mxGeometry height="60" width="130" x="150" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AdvBox" parent="Ph5_Group" style="shape=note;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;align=left;" value="Key Advantages:&#xa;• CNN Power + SVM Non-linear&#xa;• PCA reduces noise" vertex="1">
+          <mxGeometry height="60" width="250" x="10" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ArrAdv" edge="1" parent="Ph5_Group" source="AdvBox" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="PredResult">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

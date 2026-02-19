@@ -1,0 +1,223 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.4.0">
+  <diagram id="MethodologyFlow" name="Methodology">
+    <mxGraphModel dx="229589" dy="134380" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="0.6" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="100" parent="1" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontStyle=1;fontSize=16;labelBackgroundColor=none;swimlaneLine=1;fontColor=#46495D;" value="Dataset Preparation" vertex="1">
+          <mxGeometry height="30" width="200" x="540" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="200" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="IQ-OTH/NCCD Lung Cancer Dataset" vertex="1">
+          <mxGeometry height="50" width="220" x="300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="201" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Lung Cancer 4 Type Dataset" vertex="1">
+          <mxGeometry height="50" width="220" x="900" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="202" parent="1" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Mapping Logic" vertex="1">
+          <mxGeometry height="60" width="100" x="590" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="301" edge="1" parent="1" source="200" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="202">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="302" edge="1" parent="1" source="201" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="202">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="212" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="New Combined Dataset&lt;br&gt;(3 Classes: Benign, Malignant, Normal)" vertex="1">
+          <mxGeometry height="50" width="200" x="540" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="303" edge="1" parent="1" source="202" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="212">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="300" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="1. Data Augmentation Pipeline" vertex="1">
+          <mxGeometry height="260" width="240" x="520" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="301_new" parent="300" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Raw Input (from merged)" vertex="1">
+          <mxGeometry height="30" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="302_new" parent="300" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="No-Resize Strategy (Original Res)" vertex="1">
+          <mxGeometry height="30" width="240" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="303_new" parent="300" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Contrast: CLAHE &amp; Gamma (0.5)" vertex="1">
+          <mxGeometry height="40" width="240" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="305_new" parent="300" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Augment: Rot/Zoom/Shear/Flip" vertex="1">
+          <mxGeometry height="50" width="240" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="306_new" parent="300" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Balancing Loop (Target: 1200)" vertex="1">
+          <mxGeometry height="40" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="307_new" parent="300" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Final Output (3600 Images)" vertex="1">
+          <mxGeometry height="40" width="240" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="318_new" edge="1" parent="1" source="212" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="300">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="400" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="1. EfficientNetB3 Workflow (10 Steps)" vertex="1">
+          <mxGeometry height="470" width="260" x="20" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="401" parent="400" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="1. Config &amp; Imports" vertex="1">
+          <mxGeometry height="40" width="260" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="402" parent="400" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="2. Split Data (Test -&gt; Val/Final)" vertex="1">
+          <mxGeometry height="40" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="403" parent="400" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="3. Define Model Architecture" vertex="1">
+          <mxGeometry height="40" width="260" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="404" parent="400" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="4. Data Split Verification" vertex="1">
+          <mxGeometry height="40" width="260" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="405" parent="400" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="5. Define Optuna Obj (Phase 1)" vertex="1">
+          <mxGeometry height="40" width="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="406" parent="400" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="6. Run Optuna (Hyperparams)" vertex="1">
+          <mxGeometry height="50" width="260" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="407" parent="400" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="7. Define Optuna Obj (Phase 2)" vertex="1">
+          <mxGeometry height="40" width="260" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="408" parent="400" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="8. Run Optuna (Freeze Count)" vertex="1">
+          <mxGeometry height="50" width="260" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="409" parent="400" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="9. Final Model Training" vertex="1">
+          <mxGeometry height="50" width="260" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="410" parent="400" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="10. Final Evaluation" vertex="1">
+          <mxGeometry height="50" width="260" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="500" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="2. ViT Pipeline" vertex="1">
+          <mxGeometry height="310" width="200" x="320" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="501" parent="500" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Patch Creation" vertex="1">
+          <mxGeometry height="40" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="502" parent="500" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Linear Projection" vertex="1">
+          <mxGeometry height="40" width="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="503" parent="500" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Positional Embeddings" vertex="1">
+          <mxGeometry height="40" width="200" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="504" parent="500" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Transformer Encoder" vertex="1">
+          <mxGeometry height="60" width="200" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="505" parent="500" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="MLP Head (Classify)" vertex="1">
+          <mxGeometry height="50" width="200" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="506" parent="500" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Training (50 Epochs)" vertex="1">
+          <mxGeometry height="50" width="200" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="600" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="3. ResNet101 Pipeline" vertex="1">
+          <mxGeometry height="310" width="200" x="560" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="601" parent="600" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="ResNet101 Backbone" vertex="1">
+          <mxGeometry height="60" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="602" parent="600" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Layer Freezing (First 80)" vertex="1">
+          <mxGeometry height="40" width="200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="603" parent="600" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Global Average Pooling" vertex="1">
+          <mxGeometry height="40" width="200" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="604" parent="600" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Dense (256, ReLU)" vertex="1">
+          <mxGeometry height="40" width="200" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="605" parent="600" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Output (Softmax)" vertex="1">
+          <mxGeometry height="50" width="200" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="606" parent="600" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Training (20 Epochs)" vertex="1">
+          <mxGeometry height="50" width="200" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="700" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="4. YOLOv11 Pipeline" vertex="1">
+          <mxGeometry height="350" width="200" x="800" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="701" parent="700" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="C3K2 Blocks (Backbone)" vertex="1">
+          <mxGeometry height="40" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="702" parent="700" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="SPPF Module" vertex="1">
+          <mxGeometry height="40" width="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="703" parent="700" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="C2PSA Attention" vertex="1">
+          <mxGeometry height="40" width="200" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="704" parent="700" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Classify Head" vertex="1">
+          <mxGeometry height="40" width="200" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="705" parent="700" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Optuna Search (15 Trials)" vertex="1">
+          <mxGeometry height="50" width="200" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="706" parent="700" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Freeze Layer Search" vertex="1">
+          <mxGeometry height="50" width="200" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="707" parent="700" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Two-Stage Training" vertex="1">
+          <mxGeometry height="60" width="200" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="800" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="5. Hybrid Pipeline (Best)" vertex="1">
+          <mxGeometry height="270" width="200" x="1040" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="801" parent="800" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="EfficientNetB3 (Extractor)" vertex="1">
+          <mxGeometry height="60" width="200" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="802" parent="800" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Feature Vector (1536 dim)" vertex="1">
+          <mxGeometry height="40" width="200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="803" parent="800" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="PCA (512 Components)" vertex="1">
+          <mxGeometry height="40" width="200" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="804" parent="800" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="StandardScaler" vertex="1">
+          <mxGeometry height="40" width="200" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="805" parent="800" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="SVM Classifier (RBF)" vertex="1">
+          <mxGeometry height="60" width="200" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="901" edge="1" parent="1" source="307_new" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#788AA3;" target="400">
+          <Array as="points">
+            <mxPoint x="640" y="590" />
+            <mxPoint x="150" y="590" />
+          </Array>
+        </mxCell>
+        <mxCell id="902" edge="1" parent="1" source="307_new" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#788AA3;" target="500">
+          <Array as="points">
+            <mxPoint x="640" y="590" />
+            <mxPoint x="420" y="590" />
+          </Array>
+        </mxCell>
+        <mxCell id="903" edge="1" parent="1" source="307_new" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#788AA3;" target="600">
+          <Array as="points">
+            <mxPoint x="640" y="590" />
+            <mxPoint x="660" y="590" />
+          </Array>
+        </mxCell>
+        <mxCell id="904" edge="1" parent="1" source="307_new" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#788AA3;" target="700">
+          <Array as="points">
+            <mxPoint x="640" y="590" />
+            <mxPoint x="900" y="590" />
+          </Array>
+        </mxCell>
+        <mxCell id="905" edge="1" parent="1" source="307_new" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;strokeColor=#788AA3;" target="800">
+          <Array as="points">
+            <mxPoint x="640" y="590" />
+            <mxPoint x="1140" y="590" />
+          </Array>
+        </mxCell>
+        <mxCell id="999" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=14;labelBackgroundColor=none;swimlaneLine=1;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" value="Evaluation &amp; Comparison&lt;br&gt;(Accuracy: Hybrid &gt; EfficientNet &gt; ResNet &gt; ViT &gt; YOLO)" vertex="1">
+          <mxGeometry height="80" width="600" x="400" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="910" edge="1" parent="1" source="400" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="999">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="911" edge="1" parent="1" source="500" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="999">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="912" edge="1" parent="1" source="600" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="999">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="913" edge="1" parent="1" source="700" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="999">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="914" edge="1" parent="1" source="800" style="labelBackgroundColor=none;fontColor=default;swimlaneLine=1;strokeColor=#788AA3;" target="999">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
