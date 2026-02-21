@@ -23,6 +23,15 @@ Instead of retraining the entire neural network, we leveraged the pre-trained kn
 *   **Kernel:** RBF (Radial Basis Function).
 *   **Hyperparameters:** `C=10`, `gamma='scale'`.
 
+### 1.4 Dataset Standardization & Reproducibility
+*   **Trimming:** The dataset was standardized to exactly **3,800 samples** (down-sampled from 3,811+).
+*   **Rationale:** Trimming the data to a round number like 3,800 prevents **decimal values** (fractions of an image) when applying percentage-based splits. For instance, a 15% split of the original 3,811 samples would result in 571.65 images, which is not possible in practice.
+*   **Exact Distribution (68/17/15 ratio):**
+    *   **Training:** 2,584 images (68% of 3,800)
+    *   **Validation:** 646 images (17% of 3,800)
+    *   **Testing:** 570 images (15% of 3,800)
+*   **Consistency:** A fixed `random_state=42` was used to ensure the selection is perfectly reproducible across different environments.
+
 ## 2. Experimental Results
 
 The model was evaluated on a held-out test set of 570 images.
