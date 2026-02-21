@@ -34,7 +34,7 @@ Instead of retraining the entire neural network, we leveraged the pre-trained kn
 
 ## 2. Experimental Results
 
-The model was evaluated on a held-out test set of 570 images.
+The model was evaluated on a **held-out test set** of **570 images** (exactly 15% of the total 3,800 dataset). A "held-out" set means these images were strictly isolated and were never shown to the model during the training or validation phases. This ensures an **unbiased evaluation**, as it tests the model's performance on completely unseen data. This is the gold standard for verifying **generalization**—the model's ability to accurately predict new cases rather than just memorizing the training data.
 
 ### 2.1 Quantitative Metrics
 
